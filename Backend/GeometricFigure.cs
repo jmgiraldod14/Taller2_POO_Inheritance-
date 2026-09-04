@@ -3,9 +3,9 @@
 public abstract class GeometricFigure
 {
     // Constructors
-    protected GeometricFigure(string figure)
+    protected GeometricFigure(string name)
     {
-        Name = figure;
+        Name = name;
     }
 
     // Properties

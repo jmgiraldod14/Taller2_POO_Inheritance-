@@ -7,12 +7,17 @@ public class Circle : GeometricFigure
 
 
     // Constructors
-    public Circle(string figure) : base(figure)
+    public Circle(string name, double r) : base(name)
     {
+        R = r;
     }
 
     // Properties
-    public double R;
+    public double R
+    { 
+        get => _r;
+        set => _r = ValidateR(value);
+    }
 
 
     // Public methods
