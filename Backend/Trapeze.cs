@@ -22,7 +22,7 @@ public class Trapeze : Triangle
 
 
     // Public methods
-    public override double GetArea() => ((B + C) * H) / 2;
+    public override double GetArea() => ((B + D) * H) / 2;
 
     public override double GetPerimeter() => A + B + C + D;
 
