@@ -1,38 +1,38 @@
-﻿namespace Backend
+﻿namespace Backend;
+
+public class Rectangle : Square
 {
-    public class Rectangle : Square
+    // Fields
+    private double _b;
+
+    // Constructors
+    public Rectangle(string name, double a, double b) : base(name, a)
     {
-        // Fields
-        private double _b;
+        B = b;
+    }
 
-        // Constructors
-        public Rectangle(string name, double a, double b) : base(name, a)
+    // Properties
+    public double B
+    {
+        get => _b;
+        set => _b = ValidateB(value);
+    }
+
+
+    // Public methods
+    public override double GetArea() => A * B;
+
+    public override double GetPerimeter() => 2 * (A + B);
+
+
+    // Private methods
+    private double ValidateB(double b)
+    {
+        if (b <= 0)
         {
-            B = b;
+            throw new Exception($"El valor ingresado para el lado no es valido");
         }
-
-        // Properties
-        public double B
-        {
-            get => _b;
-            set => _b = ValidateB(value);
-        }
-
-
-        // Public methods
-        public override double GetArea() => A * B;
-
-        public override double GetPerimeter() => 2 * (A + B);
-
-
-        // Private methods
-        private double ValidateB(double b)
-        {
-            if (b <= 0)
-            {
-                throw new Exception($"El valor ingresado para el lado no es valido");
-            }
-            return b;
-        }
+        return b;
     }
 }
+

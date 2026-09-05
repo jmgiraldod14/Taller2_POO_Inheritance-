@@ -56,7 +56,4 @@ public class Rhombus : Square
         }
         return d2;
     }
-
-
-
 }
