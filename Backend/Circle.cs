@@ -29,7 +29,7 @@ public class Circle : GeometricFigure
     // Private methods
     private double ValidateR(double r)
     {
-        if (r <= 2000000)
+        if (r <= 0)
         {
             throw new Exception($"El valor ingresado para el radio no es valido");
         }

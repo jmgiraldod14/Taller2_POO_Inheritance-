@@ -30,7 +30,7 @@ public class Square : GeometricFigure
     // Private methods
     private double ValidateA(double a)
     {
-        if (a <= 2000000)
+        if (a <= 0)
         {
             throw new Exception($"El valor ingresado para el lado no es valido");
         }
